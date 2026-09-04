@@ -1,0 +1,101 @@
+{"level":"info","time":"2026-09-04T00:33:02.591+0800","caller":"config/config.go:24","msg":"Starting application..."}
+{"level":"info","time":"2026-09-04T00:33:02.593+0800","caller":"config/config.go:38","msg":"Config loaded successfully","app_name":"CurrencyExchangeApp","port":":3000"}
+{"level":"info","time":"2026-09-04T00:33:02.593+0800","caller":"config/db.go:14","msg":"Initializing database connection..."}
+{"level":"info","time":"2026-09-04T00:33:02.604+0800","caller":"config/db.go:24","msg":"Database connected successfully"}
+{"level":"info","time":"2026-09-04T00:33:02.604+0800","caller":"config/db.go:26","msg":"Running database migration..."}
+{"level":"info","time":"2026-09-04T00:33:02.654+0800","caller":"config/db.go:34","msg":"Database migration completed successfully"}
+{"level":"info","time":"2026-09-04T00:33:02.654+0800","caller":"config/db.go:45","msg":"Database connection pool configured","max_idle_conns":11,"max_open_conns":114}
+{"level":"info","time":"2026-09-04T00:33:02.655+0800","caller":"config/redis.go:11","msg":"Initializing Redis connection..."}
+{"level":"info","time":"2026-09-04T00:33:02.671+0800","caller":"config/redis.go:25","msg":"Redis connected successfully"}
+{"level":"info","time":"2026-09-04T00:33:02.672+0800","caller":"ProjectA/main.go:20","msg":"Starting HTTP server","port":":3000","app_name":"CurrencyExchangeApp"}
+{"level":"error","time":"2026-09-04T00:34:51.191+0800","caller":"controllers/auth_controller.go:37","msg":"Failed to create user","error":"Error 1062 (23000): Duplicate entry 'cxqmn666' for key 'users.uni_users_username'","username":"cxqmn666","stacktrace":"ProjectA/controllers.Register\n\tD:/ProjectA/controllers/auth_controller.go:37\ngithub.com/gin-gonic/gin.(*Context).Next\n\tD:/GoWorkSpace/GoWorkSpace/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192\nProjectA/router.SetupRouter.LoggerMiddleware.func1\n\tD:/ProjectA/router/router.go:19\ngithub.com/gin-gonic/gin.(*Context).Next\n\tD:/GoWorkSpace/GoWorkSpace/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192\ngithub.com/gin-gonic/gin.CustomRecoveryWithWriter.func1\n\tD:/GoWorkSpace/GoWorkSpace/pkg/mod/github.com/gin-gonic/gin@v1.12.0/recovery.go:90\ngithub.com/gin-gonic/gin.(*Context).Next\n\tD:/GoWorkSpace/GoWorkSpace/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192\ngithub.com/gin-gonic/gin.LoggerWithConfig.func1\n\tD:/GoWorkSpace/GoWorkSpace/pkg/mod/github.com/gin-gonic/gin@v1.12.0/logger.go:282\ngithub.com/gin-gonic/gin.(*Context).Next\n\tD:/GoWorkSpace/GoWorkSpace/pkg/mod/github.com/gin-gonic/gin@v1.12.0/context.go:192\ngithub.com/gin-gonic/gin.(*Engine).handleHTTPRequest\n\tD:/GoWorkSpace/GoWorkSpace/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:722\ngithub.com/gin-gonic/gin.(*Engine).ServeHTTP\n\tD:/GoWorkSpace/GoWorkSpace/pkg/mod/github.com/gin-gonic/gin@v1.12.0/gin.go:672\nnet/http.serverHandler.ServeHTTP\n\tC:/Program Files/Go/src/net/http/server.go:3340\nnet/http.(*conn).serve\n\tC:/Program Files/Go/src/net/http/server.go:2109"}
+{"level":"info","time":"2026-09-04T00:34:51.192+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/auth/register","status":500,"latency":0.2768911,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.4.0"}
+{"level":"info","time":"2026-09-04T00:36:42.447+0800","caller":"controllers/auth_controller.go:55","msg":"User registered successfully","username":"cxqmn6667","ip":"127.0.0.1"}
+{"level":"info","time":"2026-09-04T00:36:42.447+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/auth/register","status":200,"latency":0.223357,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.4.0"}
+{"level":"info","time":"2026-09-04T00:41:30.561+0800","caller":"controllers/auth_controller.go:106","msg":"User logged in successfully","username":"cxqmn6667","ip":"127.0.0.1"}
+{"level":"info","time":"2026-09-04T00:41:30.562+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/auth/login","status":200,"latency":0.2064304,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.4.0"}
+{"level":"info","time":"2026-09-04T00:45:56.451+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"GET","path":"/api/exchangeRates","status":200,"latency":0.0022138,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.4.0"}
+{"level":"info","time":"2026-09-04T00:49:21.032+0800","caller":"controllers/auth_controller.go:106","msg":"User logged in successfully","username":"cxqmn6667","ip":"127.0.0.1"}
+{"level":"info","time":"2026-09-04T00:49:21.050+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/auth/login","status":200,"latency":0.3608414,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"warn","time":"2026-09-04T00:51:09.934+0800","caller":"controllers/auth_controller.go:69","msg":"Invalid login request","error":"EOF","ip":"127.0.0.1"}
+{"level":"info","time":"2026-09-04T00:51:09.935+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/auth/login","status":400,"latency":0.0010017,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"warn","time":"2026-09-04T00:52:00.163+0800","caller":"controllers/auth_controller.go:69","msg":"Invalid login request","error":"EOF","ip":"127.0.0.1"}
+{"level":"info","time":"2026-09-04T00:52:00.163+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/auth/login","status":400,"latency":0,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"warn","time":"2026-09-04T00:52:14.764+0800","caller":"controllers/auth_controller.go:69","msg":"Invalid login request","error":"EOF","ip":"127.0.0.1"}
+{"level":"info","time":"2026-09-04T00:52:14.764+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/auth/login","status":400,"latency":0,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T00:55:16.334+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"GET","path":"/api/exchangeRates","status":200,"latency":0.0005075,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T00:57:20.290+0800","caller":"controllers/exchange_rate_controller.go:40","msg":"Exchange rate created successfully","from":"RMB","to":"USD","rate":0.14}
+{"level":"info","time":"2026-09-04T00:57:20.291+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/exchangeRates","status":200,"latency":0.0254069,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T00:58:32.612+0800","caller":"controllers/exchange_rate_controller.go:40","msg":"Exchange rate created successfully","from":"RMB","to":"USD","rate":0.14}
+{"level":"info","time":"2026-09-04T00:58:32.612+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/exchangeRates","status":200,"latency":0.0240563,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T01:02:56.070+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"GET","path":"/api/articles","status":401,"latency":0.014421,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T01:03:27.596+0800","caller":"controllers/exchange_rate_controller.go:40","msg":"Exchange rate created successfully","from":"RMB","to":"USD","rate":0.14}
+{"level":"info","time":"2026-09-04T01:03:27.596+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/exchangeRates","status":200,"latency":0.0240597,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T01:03:45.189+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"GET","path":"/api/articles","status":200,"latency":0.0126755,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T01:04:13.114+0800","caller":"controllers/article_controller.go:47","msg":"Article created successfully","title":"ysdkbl","id":4}
+{"level":"info","time":"2026-09-04T01:04:13.114+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/articles","status":200,"latency":0.0047785,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T01:07:37.211+0800","caller":"controllers/auth_controller.go:106","msg":"User logged in successfully","username":"cxqmn6667","ip":"127.0.0.1"}
+{"level":"info","time":"2026-09-04T01:07:37.211+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/auth/login","status":200,"latency":0.215626,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"warn","time":"2026-09-04T01:08:01.980+0800","caller":"controllers/article_controller.go:119","msg":"Article not found","id":":1"}
+{"level":"info","time":"2026-09-04T01:08:01.980+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"GET","path":"/api/articles/:1","status":404,"latency":0.0015153,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T01:09:16.057+0800","caller":"controllers/article_controller.go:47","msg":"Article created successfully","title":"ysdkbl","id":5}
+{"level":"info","time":"2026-09-04T01:09:16.058+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/articles","status":200,"latency":0.0276614,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"warn","time":"2026-09-04T01:09:32.498+0800","caller":"controllers/article_controller.go:119","msg":"Article not found","id":":5"}
+{"level":"info","time":"2026-09-04T01:09:32.498+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"GET","path":"/api/articles/:5","status":404,"latency":0.0005263,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"warn","time":"2026-09-04T01:09:35.133+0800","caller":"controllers/article_controller.go:119","msg":"Article not found","id":":5"}
+{"level":"info","time":"2026-09-04T01:09:35.133+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"GET","path":"/api/articles/:5","status":404,"latency":0.001001,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"warn","time":"2026-09-04T01:09:37.334+0800","caller":"controllers/article_controller.go:119","msg":"Article not found","id":":5"}
+{"level":"info","time":"2026-09-04T01:09:37.334+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"GET","path":"/api/articles/:5","status":404,"latency":0.0005109,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"warn","time":"2026-09-04T01:09:58.211+0800","caller":"controllers/article_controller.go:119","msg":"Article not found","id":":3"}
+{"level":"info","time":"2026-09-04T01:09:58.211+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"GET","path":"/api/articles/:3","status":404,"latency":0.0005059,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T01:10:04.908+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"GET","path":"/api/articles","status":200,"latency":0.0017079,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T01:10:43.803+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"GET","path":"/api/articles/3","status":200,"latency":0.0005045,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T01:12:10.565+0800","caller":"config/config.go:24","msg":"Starting application..."}
+{"level":"info","time":"2026-09-04T01:12:10.567+0800","caller":"config/config.go:38","msg":"Config loaded successfully","app_name":"CurrencyExchangeApp","port":":3000"}
+{"level":"info","time":"2026-09-04T01:12:10.567+0800","caller":"config/db.go:14","msg":"Initializing database connection..."}
+{"level":"info","time":"2026-09-04T01:12:10.575+0800","caller":"config/db.go:24","msg":"Database connected successfully"}
+{"level":"info","time":"2026-09-04T01:12:10.575+0800","caller":"config/db.go:26","msg":"Running database migration..."}
+{"level":"info","time":"2026-09-04T01:12:10.601+0800","caller":"config/db.go:34","msg":"Database migration completed successfully"}
+{"level":"info","time":"2026-09-04T01:12:10.601+0800","caller":"config/db.go:45","msg":"Database connection pool configured","max_idle_conns":11,"max_open_conns":114}
+{"level":"info","time":"2026-09-04T01:12:10.601+0800","caller":"config/redis.go:11","msg":"Initializing Redis connection..."}
+{"level":"info","time":"2026-09-04T01:12:10.614+0800","caller":"config/redis.go:25","msg":"Redis connected successfully"}
+{"level":"info","time":"2026-09-04T01:12:10.614+0800","caller":"ProjectA/main.go:20","msg":"Starting HTTP server","port":":3000","app_name":"CurrencyExchangeApp"}
+{"level":"info","time":"2026-09-04T01:12:14.514+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"GET","path":"/api/article/3","status":200,"latency":0.0016402,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T01:12:29.348+0800","caller":"controllers/auth_controller.go:106","msg":"User logged in successfully","username":"cxqmn6667","ip":"127.0.0.1"}
+{"level":"info","time":"2026-09-04T01:12:29.349+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/auth/login","status":200,"latency":0.2134473,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T01:13:41.951+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"GET","path":"/api/article/3/like","status":200,"latency":0.0005039,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T01:21:24.088+0800","caller":"controllers/like_concroller.go:26","msg":"Article liked successfully","article_id":"3","ip":"127.0.0.1"}
+{"level":"info","time":"2026-09-04T01:21:24.089+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/article/3/like","status":200,"latency":0.0065866,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T01:21:51.235+0800","caller":"controllers/like_concroller.go:26","msg":"Article liked successfully","article_id":"3","ip":"127.0.0.1"}
+{"level":"info","time":"2026-09-04T01:21:51.235+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/article/3/like","status":200,"latency":0,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T01:22:03.874+0800","caller":"controllers/like_concroller.go:26","msg":"Article liked successfully","article_id":"3","ip":"127.0.0.1"}
+{"level":"info","time":"2026-09-04T01:22:03.874+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/article/3/like","status":200,"latency":0,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T01:22:04.789+0800","caller":"controllers/like_concroller.go:26","msg":"Article liked successfully","article_id":"3","ip":"127.0.0.1"}
+{"level":"info","time":"2026-09-04T01:22:04.790+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/article/3/like","status":200,"latency":0.0005064,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T01:22:09.950+0800","caller":"router/router.go:21","msg":"HTTP Request","method":"GET","path":"/api/article/3/like","status":200,"latency":0,"ip":"127.0.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T16:55:45.805Z","caller":"config/config.go:24","msg":"Starting application..."}
+{"level":"info","time":"2026-09-04T16:55:45.812Z","caller":"config/config.go:38","msg":"Config loaded successfully","app_name":"CurrencyExchangeApp","port":":3000"}
+{"level":"info","time":"2026-09-04T16:55:45.813Z","caller":"config/db.go:14","msg":"Initializing database connection..."}
+{"level":"info","time":"2026-09-04T16:55:45.821Z","caller":"config/db.go:24","msg":"Database connected successfully"}
+{"level":"info","time":"2026-09-04T16:55:45.822Z","caller":"config/db.go:26","msg":"Running database migration..."}
+{"level":"info","time":"2026-09-04T16:55:45.952Z","caller":"config/db.go:34","msg":"Database migration completed successfully"}
+{"level":"info","time":"2026-09-04T16:55:45.953Z","caller":"config/db.go:45","msg":"Database connection pool configured","max_idle_conns":11,"max_open_conns":114}
+{"level":"info","time":"2026-09-04T16:55:45.954Z","caller":"config/redis.go:11","msg":"Initializing Redis connection..."}
+{"level":"info","time":"2026-09-04T16:55:45.956Z","caller":"config/redis.go:25","msg":"Redis connected successfully"}
+{"level":"info","time":"2026-09-04T16:55:45.958Z","caller":"app/main.go:20","msg":"Starting HTTP server","port":":3000","app_name":"CurrencyExchangeApp"}
+{"level":"warn","time":"2026-09-04T16:56:44.740Z","caller":"controllers/auth_controller.go:79","msg":"Login failed - user not found","username":"cxqmn6667","ip":"172.18.0.1"}
+{"level":"info","time":"2026-09-04T16:56:44.742Z","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/auth/login","status":401,"latency":0.014207262,"ip":"172.18.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T16:57:03.053Z","caller":"controllers/auth_controller.go:55","msg":"User registered successfully","username":"dockertest","ip":"172.18.0.1"}
+{"level":"info","time":"2026-09-04T16:57:03.055Z","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/auth/register","status":200,"latency":0.22621284,"ip":"172.18.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T16:57:33.871Z","caller":"controllers/auth_controller.go:55","msg":"User registered successfully","username":"cxqmn6667","ip":"172.18.0.1"}
+{"level":"info","time":"2026-09-04T16:57:33.872Z","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/auth/register","status":200,"latency":0.199284892,"ip":"172.18.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T16:57:37.283Z","caller":"controllers/auth_controller.go:106","msg":"User logged in successfully","username":"cxqmn6667","ip":"172.18.0.1"}
+{"level":"info","time":"2026-09-04T16:57:37.284Z","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/auth/login","status":200,"latency":0.186809377,"ip":"172.18.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T16:58:42.443Z","caller":"controllers/article_controller.go:47","msg":"Article created successfully","title":"ysdkbl","id":1}
+{"level":"info","time":"2026-09-04T16:58:42.445Z","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/articles","status":200,"latency":0.00915121,"ip":"172.18.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T16:58:48.934Z","caller":"controllers/like_concroller.go:26","msg":"Article liked successfully","article_id":"3","ip":"172.18.0.1"}
+{"level":"info","time":"2026-09-04T16:58:48.935Z","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/article/3/like","status":200,"latency":0.001353774,"ip":"172.18.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T16:58:49.567Z","caller":"controllers/like_concroller.go:26","msg":"Article liked successfully","article_id":"3","ip":"172.18.0.1"}
+{"level":"info","time":"2026-09-04T16:58:49.578Z","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/article/3/like","status":200,"latency":0.011557596,"ip":"172.18.0.1","user_agent":"PostmanRuntime/2.5.0"}
+{"level":"info","time":"2026-09-04T16:58:50.252Z","caller":"controllers/like_concroller.go:26","msg":"Article liked successfully","article_id":"3","ip":"172.18.0.1"}
+{"level":"info","time":"2026-09-04T16:58:50.253Z","caller":"router/router.go:21","msg":"HTTP Request","method":"POST","path":"/api/article/3/like","status":200,"latency":0.001638785,"ip":"172.18.0.1","user_agent":"PostmanRuntime/2.5.0"}
