@@ -1,5 +1,7 @@
 # ProjectA
 
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 基于 Go + Gin + GORM + Redis 的 Web 后端项目
 
 ## 技术栈
@@ -34,3 +36,7 @@ docker compose up -d
 | POST | /api/articles | 创建文章 |
 | GET | /api/articles | 获取文章列表 |
 | POST | /api/article/:id/like | 点赞 |
+
+## 开源协议
+
+本项目采用 [MIT License](LICENSE) 开源协议。
