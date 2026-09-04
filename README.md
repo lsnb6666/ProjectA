@@ -16,7 +16,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/lsnb666-2778/ProjectA.git
+git clone https://github.com/lsnb6666/ProjectA.git
 
 # 进入项目目录
 cd ProjectA
