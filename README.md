@@ -5,7 +5,7 @@
 基于 Go + Gin + GORM + Redis 的 Web 后端项目
 
 ## 技术栈
-- Go 1.25
+- Go 1.26
 - Gin Web 框架
 - GORM ORM
 - MySQL 8.0
